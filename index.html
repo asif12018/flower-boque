@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>A Gift For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Beautiful Animated Background -->
+    <div class="background" id="background">
+        <div class="god-rays"></div>
+        <div class="ambient-glow"></div>
+        
+        <!-- Romantic Bokeh Lights -->
+        <div class="bokeh-container">
+            <div class="bokeh b-1"></div>
+            <div class="bokeh b-2"></div>
+            <div class="bokeh b-3"></div>
+            <div class="bokeh b-4"></div>
+            <div class="bokeh b-5"></div>
+        </div>
+
+        <div class="dust-particles" id="dust-particles"></div>
+        <div class="petals-container" id="petals"></div>
+    </div>
+
+    <!-- Step 1: Initial Greeting (Visible on load) -->
+    <div class="intro-screen" id="intro-screen">
+        <h1 class="intro-text">You have a gift from Asif</h1>
+        <button class="intro-btn" id="btn-open-gift">Click to open it</button>
+    </div>
+
+    <!-- Music Control (Hidden initially) -->
+    <header class="controls" id="controls" style="display: none;">
+        <button id="music-btn" class="music-btn" aria-label="Toggle music">
+            <div class="sound-waves" id="sound-waves">
+                <span></span><span></span><span></span>
+            </div>
+        </button>
+    </header>
+
+    <!-- Step 2: The Gift Scene (Hidden initially) -->
+    <main class="scene hidden" id="scene">
+        
+        <!-- Animated Butterflies (Appear with the bouquet) -->
+        <div class="butterflies-container">
+            <div class="butterfly-path path-1">
+                <div class="butterfly">
+                    <div class="wing wing-left"></div>
+                    <div class="wing wing-right"></div>
+                </div>
+            </div>
+            <div class="butterfly-path path-2">
+                <div class="butterfly">
+                    <div class="wing wing-left"></div>
+                    <div class="wing wing-right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Bouquet -->
+        <div class="bouquet-container" id="bouquet">
+            <img src="assets/bouquet_transparent.png" alt="Bouquet" class="bouquet-image" id="bouquet-img">
+        </div>
+
+        <!-- The Interactive Card -->
+        <div class="card-container" id="card-container">
+            <!-- The Envelope -->
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <span class="envelope-text">For You</span>
+                </div>
+                <!-- The Letter inside -->
+                <div class="letter" id="letter">
+                    <h1 id="msg-title" class="letter-title"></h1>
+                    <p id="msg-body" class="letter-body"></p>
+                    <p id="msg-sign" class="letter-sign"></p>
+                </div>
+            </div>
+            <!-- The Open Button -->
+            <button id="btn-open-card" class="open-card-btn">Click here to open your card</button>
+        </div>
+
+    </main>
+
+    <!-- Audio Element -->
+    <audio id="bg-music" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
